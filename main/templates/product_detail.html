@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+		
+		{% block body %}
+		<div class="body">
+			<div role="main" class="main">
+
+				<section class="page-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a href="#">Home</a></li>
+									<li class="active">Portfolio</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<h1>{{ product.name }}</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="portfolio-title">
+								<div class="row">
+									<div class="portfolio-nav-all col-md-1">
+										<a href="/product_list/{{ product.category.slug }}" data-tooltip data-original-title="Back to list"><i class="fa fa-th"></i></a>
+									</div>
+									<div class="col-md-10 center">
+										<h2 class="mb-none">{{ product.name }}</h2>
+									</div>
+									<div class="portfolio-nav col-md-1">
+										<a href="portfolio-single-project.html" class="portfolio-nav-prev" data-tooltip data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
+										<a href="portfolio-single-project.html" class="portfolio-nav-next" data-tooltip data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<hr class="tall">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="owl-carousel" data-plugin-options='{"items": 1, "margin": 10}'>
+								<div>
+									<span class="img-thumbnail">
+										<img alt="" class="img-responsive" src="{{ product.image.url }}">
+									</span>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-8">
+
+							<div class="portfolio-info">
+								<div class="row">
+									<div class="col-md-12 center">
+									</div>
+								</div>
+							</div>
+
+							<h4 class="heading-primary">Project <strong>Description</strong></h4>
+							<p class="mt-xlg">{{ product.info }}</p>
+							{% comment %}
+								
+							
+							<a href="#" class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Live Preview</a> <span class="arrow hlb" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>
+
+							<ul class="portfolio-details">
+								<li>
+									<p><strong>Skills:</strong></p>
+
+									<ul class="list list-inline list-icons">
+										<li><i class="fa fa-check-circle"></i> Design</li>
+										<li><i class="fa fa-check-circle"></i> HTML/CSS</li>
+										<li><i class="fa fa-check-circle"></i> Javascript</li>
+										<li><i class="fa fa-check-circle"></i> Backend</li>
+									</ul>{% endcomment %}
+								</li>
+								<li>
+									<p><strong>Client:</strong></p>
+									<p>Okler Themes</p>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+{% endblock %}
